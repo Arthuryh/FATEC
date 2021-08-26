@@ -1,5 +1,5 @@
 //FATEC Ipiranga
-//Disciplina: Programação Estruturada e Modular
+//Disciplina: Programacao Estruturada e Modular
 //Aluno.....: Arthur Yoshio Hayakawa
 
 #include <stdio.h>
@@ -11,67 +11,67 @@ int main()
 	int aux1 = 0, aux2 = 0, i, soma, tamanho1, tamanho2, casas;
     
 	//----PRIMEIRO VETOR----
-    printf("Quantas casas o 1º número possuí? ");
-    scanf("%d", &tamanho1); //o tamanho1, vai servir de paramêtro para definir o tamanho dos vetores
+    printf("Quantas casas o 1o numero possui? ");
+    scanf("%d", &tamanho1); //o tamanho1, vai servir de paramatro para definir o tamanho dos vetores
     
-    int vet1[tamanho1+1], //o primeiro vetor, tem um espaço adicional, se houver necessidade de exibir um número proveniente das somas
-	vet2[tamanho1]; //o segundo vetor, recebe o mesmo tamanho do tamanho1, caso tenha números de mesmo tamanho, ou que seja um numero menor
+    int vet1[tamanho1+1], //o primeiro vetor, tem um espaï¿½o adicional, se houver necessidade de exibir um nï¿½mero proveniente das somas
+	vet2[tamanho1]; //o segundo vetor, recebe o mesmo tamanho do tamanho1, caso tenha nï¿½meros de mesmo tamanho, ou que seja um numero menor
     
-	for(i=0; i<tamanho1+1; i++) { //preenchimento do 1º vetor de 0,
-		vet1[i] = 0; }			  // evitando sujeiras de memória e possíveis problemas
+	for(i=0; i<tamanho1+1; i++) { //preenchimento do 1o vetor de 0,
+		vet1[i] = 0; }			  // evitando sujeiras de memoria e possiveis problemas
     	
-    for(i=1; i<=tamanho1; i++) { //preenchimento do vetor com números escolhidos pelo usuário
-    	printf("Qual o número da %dº casa? [digite de 0 a 9] ",i);
+    for(i=1; i<=tamanho1; i++) { //preenchimento do vetor com nï¿½meros escolhidos pelo usuï¿½rio
+    	printf("Qual o numero da %d1o casa? [digite de 0 a 9] ",i);
     	scanf("%d",&aux1);
     	vet1[i-1] = aux1; }
 	
-	printf("O número digitado foi: "); //exibição dos números digitados
+	printf("O numero digitado foi: "); //exibicao dos numeros digitados
 	for(i=tamanho1; i>0; i--) {
 		printf("%d",vet1[i-1]); }
 	
 	//----SEGUNDO VETOR----
-	printf("\n\nQuantas casas o 2º número possuí? [Deve ser menor ou igual que o nº de casas do 1º Número] ");	//definição do tamanho2, na qual vai servir de parâmetro para
-    scanf("%d", &tamanho2);																						//saber quantos espaços preencher no 2º vetor, e realizar os
+	printf("\n\nQuantas casas o 2o numero possui? [Deve ser menor ou igual que o N de casas do 1o Numero] ");	//definicao do tamanho2, na qual vai servir de parametro para
+    scanf("%d", &tamanho2);																						//saber quantos espacos preencher no 2o vetor, e realizar os
     																											//futuros calculos
-    for(i=0; i<tamanho1; i++) { //preenchendo os espaços do 2º vetor com 0,
-    	vet2[i] = 0;	}		//evitando sujeiras de memória e possíveis problemas
+    for(i=0; i<tamanho1; i++) { //preenchendo os espaï¿½os do 2ï¿½ vetor com 0,
+    	vet2[i] = 0;	}		//evitando sujeiras de memï¿½ria e possï¿½veis problemas
     
-	for(i=1; i<=tamanho2; i++) { //preenchimento do vetor com números escolhidos pelo usuário
-    	printf("Qual o número da %dº casa? [digite de 0 a 9] ",i);
+	for(i=1; i<=tamanho2; i++) { //preenchimento do vetor com nï¿½meros escolhidos pelo usuï¿½rio
+    	printf("Qual o numero da %d1a casa? [digite de 0 a 9] ",i);
     	scanf("%d",&aux1);
     	vet2[i-1] = aux1; }
 	
-	printf("O número digitado foi: "); //exibição dos números digitados
+	printf("O numero digitado foi: "); //exibiï¿½ï¿½o dos nï¿½meros digitados
 	for(i=tamanho2; i>0; i--) {
 		printf("%d",vet2[i-1]); }
 	
-	//----EXIBIÇÃO DO 1ºVETOR ANTES DO CALCULO----
-	printf("\n\n\nREALIZAÇÃO DO CALCULO: ");
-	printf("\n1ºSeq: ");
+	//----EXIBICAO DO 1o VETOR ANTES DO CALCULO----
+	printf("\n\n\nREALIZACAO DO CALCULO: ");
+	printf("\n1aSeq: ");
 	for(i=tamanho1; i>0; i--) {
 		printf("%d",vet1[i-1]); }	
 		
 	//----PARTE DO CALCULO----
 	casas = 0;
-	for(i=1; i<=tamanho2; i++) { //loop que realiza os calculos de acordo com o tamanho de casas que há no segundo vetor
+	for(i=1; i<=tamanho2; i++) { //loop que realiza os calculos de acordo com o tamanho de casas que ha no segundo vetor
 		soma = vet1[casas] + vet2[casas];
-	    aux1 = soma/10; //calcula o valor para a próxima casa
+	    aux1 = soma/10; //calcula o valor para a prï¿½xima casa
 	    aux2 = soma%10; //calcula o numero da casa atual
-		vet1[casas] = aux2;	//define que a respectiva casa, vai receber o valor da soma efetuada entre os espaços dos vetores
+		vet1[casas] = aux2;	//define que a respectiva casa, vai receber o valor da soma efetuada entre os espacos dos vetores
 		
-		if(aux1 >=1) { //se do cálculo para o valor da próxima casa tiver um número maior ou igual que 1, soma esse 1 para o número que houver na próxima casa
+		if(aux1 >=1) { //se do cï¿½lculo para o valor da prï¿½xima casa tiver um nï¿½mero maior ou igual que 1, soma esse 1 para o nï¿½mero que houver na prï¿½xima casa
 	    	vet1[casas+1] = vet1[casas+1] + aux1;	}
 	    	casas++;	}
 	
-	//----EXIBIÇÃO DO 2º VETOR----
-	printf("\n2ºSeq: ");
+	//----EXIBICAO DO 2o VETOR----
+	printf("\n2aSeq: ");
 	for(i=tamanho2; i>0; i--) {
 		printf("%d",vet2[i-1]); }	
 
-	//----EXIBIÇÃO DO RESULTADO----
+	//----EXIBICAO DO RESULTADO----
 	printf("\n---------------\n"); 
-	for(i=tamanho1; i>=0; i--) { 	//OBSERVAÇÃO: EM CASOS ESPECÍFICOS, É EXIBIDO UM 0 ADICIONAL AO RESULTADO, ISSO ACONTECE POR CAUSA DA CASA ADICIONAL
-		printf("%d ", vet1[i]);	   	//DEDICADA PARA UM NÚMERO PROVENIENTE DA SOMA DA CASA ANTERIOR, NÃO É UM ERRO, E SIM UMA PRECAUÇÃO
+	for(i=tamanho1; i>=0; i--) { 	//OBSERVASAO: EM CASOS ESPECIFICOS, E EXIBIDO UM 0 ADICIONAL AO RESULTADO, ISSO ACONTECE POR CAUSA DA CASA ADICIONAL
+		printf("%d ", vet1[i]);	   	//DEDICADA PARA UM NUMERO PROVENIENTE DA SOMA DA CASA ANTERIOR, NAO E UM ERRO, E SIM UMA PRECAUCAO
 		casas--;	}
 		
 	return 0;	}
