@@ -4,6 +4,7 @@
 
 #include<stdio.h>
 #include<stdbool.h>
+#include<string.h>
 #include<locale.h>
 
 int verificador(int cpf[], int mult[], int N) {
@@ -68,21 +69,57 @@ void imprimeOrigem(int cpf[]) {
     }
 }
 
+/*
+    Leio um CPF como texto, podendo ou não conter espaços, pontos, hifens, etc.
+    Somente os digitos são levados em consideração. Zeros são acrescentados à
+    esquerda caso não haja 11 caracteres.
+    Os valores são colocados no vetor que é passado por parâmetro
+*/
+void leiaCPF(int cpf[])
+{   char texto[30];
+    fgets(texto, 30, stdin);
+    
+    int i, j=10;
+    for(i=strlen(texto)-1; i>=0; i--)
+    {   if(texto[i]>=48 && texto[i]<=57)
+        {   cpf[j] = texto[i] - '0';
+            j--;
+        }
+    }
+    //preenchendo com zeros à esquerda
+    while(j>=0)
+    {   cpf[j] = 0;
+        j--;
+    }
+}
+/*
+    Imprime um CPF adicionado ponto e um hífen, como é costumeiro.
+*/
+void imprimeCPF(int cpf[])
+{   int i;
+    for(i=0; i<11; i++)
+    {   printf("%d", cpf[i]);
+        if(i==2||i==5) printf(".");
+        if(i==8)printf("-");
+    }
+
+}
+
 int main()
 {   setlocale(LC_ALL, "Portuguese");
 	int cpf[11];
 	int m1[9]={10,9,8,7,6,5,4,3,2};
 	int m2[10]={11,10,9,8,7,6,5,4,3,2};
 	int i;
-	printf("Entre com os 11 digitos do CPF:");
-	for(i=0;i<11;i++)
-		{	scanf("%d", &cpf[i]);
-	}
+	printf("Entre com o CPF:");
+	leiaCPF(cpf);
 	
     if(todosRepetidos(cpf) == false
     &&verificador(cpf, m1, 9) == cpf[9] 
-    &&verificador(cpf, m2, 10) == cpf[10]) 
-    printf("\nCPF Válido");
+    &&verificador(cpf, m2, 10) == cpf[10])
+    {   imprimeCPF(cpf);
+        printf(" é um CPF válido.\n");
+    }
 	else printf("\nErro no CPF");
 
     imprimeOrigem(cpf);
