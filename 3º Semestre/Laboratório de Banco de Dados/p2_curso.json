@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "629ff41cce3690302473adaf"
+  },
+  "nome": "Devops",
+  "duracao": "120"
+},{
+  "_id": {
+    "$oid": "629ff421ce3690302473adb0"
+  },
+  "nome": "APP Developer",
+  "duracao": "300"
+},{
+  "_id": {
+    "$oid": "629ff425ce3690302473adb1"
+  },
+  "nome": "Web Developer",
+  "duracao": "400"
+}]

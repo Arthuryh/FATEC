@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6284385ee9680ef2c338efc1"
+  },
+  "rua": "estrada dos humilhados",
+  "numero": "666"
+},{
+  "_id": {
+    "$oid": "62843888e9680ef2c338efc2"
+  },
+  "rua": "estrada do UML",
+  "numero": "678"
+},{
+  "_id": {
+    "$oid": "62843897e9680ef2c338efc3"
+  },
+  "rua": "estrada dos humilhados",
+  "numero": "123"
+}]

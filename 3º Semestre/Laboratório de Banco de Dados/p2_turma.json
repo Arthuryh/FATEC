@@ -1,0 +1,141 @@
+[{
+  "_id": {
+    "$oid": "629ff446ce3690302473adb8"
+  },
+  "inicio": "2022-06-20",
+  "fim": "2022-07-20",
+  "horario": "15:00",
+  "preco": "90",
+  "curso": [
+    {
+      "nome": "Devops",
+      "duracao": "120"
+    }
+  ],
+  "instrutor": [
+    {
+      "nome": "Andre Souza",
+      "telefone": "2345-0345",
+      "endereco": "Rua vergueiro"
+    }
+  ],
+  "aluno": [
+    {
+      "nome": "maria da silva",
+      "endereco": "Rua bom pastor",
+      "telefone": "2342-4234"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "629ff44ece3690302473adb9"
+  },
+  "inicio": "2022-06-20",
+  "fim": "2022-07-20",
+  "horario": "15:00",
+  "preco": "90",
+  "curso": [
+    {
+      "nome": "Devops",
+      "duracao": "120"
+    }
+  ],
+  "instrutor": [
+    {
+      "nome": "Andre Souza",
+      "telefone": "2345-0345",
+      "endereco": "Rua vergueiro"
+    }
+  ],
+  "aluno": [
+    {
+      "nome": "joao da silva",
+      "endereco": "av. nazaret",
+      "telefone": "8345-3455"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "629ff454ce3690302473adba"
+  },
+  "inicio": "2022-06-20",
+  "fim": "2022-07-20",
+  "horario": "15:00",
+  "preco": "90",
+  "curso": [
+    {
+      "nome": "Devops",
+      "duracao": "120"
+    }
+  ],
+  "instrutor": [
+    {
+      "nome": "Andre Souza",
+      "telefone": "2345-0345",
+      "endereco": "Rua vergueiro"
+    }
+  ],
+  "aluno": [
+    {
+      "nome": "Sandra souza",
+      "endereco": "rua silva bueno",
+      "telefone": "2345-8345"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "629ff458ce3690302473adbb"
+  },
+  "inicio": "2022-06-20",
+  "fim": "2022-07-20",
+  "horario": "15:00",
+  "preco": "90",
+  "curso": [
+    {
+      "nome": "Devops",
+      "duracao": "120"
+    }
+  ],
+  "instrutor": [
+    {
+      "nome": "Mariana Silva",
+      "telefone": "6578-5345",
+      "endereco": "av. anchieta"
+    }
+  ],
+  "aluno": [
+    {
+      "nome": "maria da silva",
+      "endereco": "Rua bom pastor",
+      "telefone": "2342-4234"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "629ff45ece3690302473adbc"
+  },
+  "inicio": "2022-06-20",
+  "fim": "2022-07-20",
+  "horario": "15:00",
+  "preco": "90",
+  "curso": [
+    {
+      "nome": "Devops",
+      "duracao": "120"
+    }
+  ],
+  "instrutor": [
+    {
+      "nome": "Juliana Alburqueque",
+      "telefone": "3465-1785",
+      "endereco": "av. cursino"
+    }
+  ],
+  "aluno": [
+    {
+      "nome": "joao da silva",
+      "endereco": "av. nazaret",
+      "telefone": "8345-3455"
+    }
+  ]
+}]

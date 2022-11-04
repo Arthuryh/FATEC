@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "62843a91e9680ef2c338eff4"
+  },
+  "OcupacaoDiaUtil": {
+    "valorPrimeiraHora": 20.5,
+    "valorHoraSubsequente": 5
+  },
+  "OcupacaoSabado": {
+    "valorPrimeiraHora": 30,
+    "valorHoraSubsequente": 10
+  }
+},{
+  "_id": {
+    "$oid": "62843af9e9680ef2c338eff5"
+  },
+  "OcupacaoDiaUtil": {
+    "valorPrimeiraHora": 19.5,
+    "valorHoraSubsequente": 4
+  },
+  "OcupacaoSabado": {
+    "valorPrimeiraHora": 25,
+    "valorHoraSubsequente": 5
+  }
+},{
+  "_id": {
+    "$oid": "62843b01e9680ef2c338eff6"
+  },
+  "OcupacaoDiaUtil": {
+    "valorPrimeiraHora": 15.5,
+    "valorHoraSubsequente": 3
+  },
+  "OcupacaoSabado": {
+    "valorPrimeiraHora": 18,
+    "valorHoraSubsequente": 4
+  }
+}]

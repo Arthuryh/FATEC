@@ -1,0 +1,47 @@
+/*Seletores por tag*/
+body {
+    background-color: black;
+    color: #D90004;
+    font-family: arial, helvetica, sans-sans-serif;
+    margin-left: 30%
+}
+
+
+h1 {
+    color: #D90004;
+}
+
+input, select, textarea {
+    background-color: darkred;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 2.5px;
+    padding: 5px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    color: black;
+    border: solid 2px black;
+    border-radius: 5px;
+}
+/*Seletor por id*/
+
+#btnEntrar {
+    background-color: green;
+    color: black;
+    font-weight: bold;
+}
+
+/*Seletor por apelido*/
+.janela{
+    width: 50%;
+    height: 50vh;
+    /*margin-left: 25%;*/
+    background-color: #540001;
+    border: solid 2px #FF0004;
+    padding: 5px;
+}

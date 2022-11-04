@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6284363fe9680ef2c338efb6"
+  },
+  "categoria": "sedan",
+  "fabricante": "chevrolet"
+},{
+  "_id": {
+    "$oid": "6284381ce9680ef2c338efbd"
+  },
+  "categoria": "hatch",
+  "fabricante": "gol"
+},{
+  "_id": {
+    "$oid": "6284382de9680ef2c338efbe"
+  },
+  "categoria": "esportivo",
+  "fabricante": "toyota"
+}]

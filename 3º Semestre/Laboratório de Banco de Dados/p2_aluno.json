@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "629ff436ce3690302473adb5"
+  },
+  "nome": "maria da silva",
+  "endereco": "Rua bom pastor",
+  "telefone": "2342-4234"
+},{
+  "_id": {
+    "$oid": "629ff43cce3690302473adb6"
+  },
+  "nome": "joao da silva",
+  "endereco": "av. nazaret",
+  "telefone": "8345-3455"
+},{
+  "_id": {
+    "$oid": "629ff440ce3690302473adb7"
+  },
+  "nome": "Sandra souza",
+  "endereco": "rua silva bueno",
+  "telefone": "2345-8345"
+}]

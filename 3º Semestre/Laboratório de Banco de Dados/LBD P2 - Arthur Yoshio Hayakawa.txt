@@ -1,0 +1,42 @@
+1-Crie um Índice na tabela ALUNO, utilizando o campo NOME (0,5)
+create index idx_aluno_1 on aluno(nome);
+
+2-Crie um Índice na tabela CURSOS, utilizando o campo CODIGO (0,5)
+create index idx_curso_1 on curso(codigo);
+
+3-Utilizando o operador BETWEEN mostre todas as TURMAS disponiveis no dia 07/06/2022 (0,5)
+select * from turma where inicio between '2022-06-07' and '2022-06-30';
+
+4-Utilizando o operador LIKE liste todos os INSTRUTOR que tenham o sobrenome SILVA (0,5)
+select * from instrutor where nome like '%SILVA%';
+
+5-Crie uma view com os dados dos TURMA trazendo os dados dos CURSOS e dos INSTRUTOR (1,0)
+create or replace view vw_cursoInstrutor as select c.nome as "Curso" , c.duracao, i.nome as "Nome Instrutor", i.telefone as "Telefone Instrutor"  from curso c  inner join instrutor i  on c.codigo = i.codigo group by i.codigo, i.nome;
+
+6-Transforme o modelo RELACIONAL acima em um modelo DOCUMENTAL NOSQL, adicione 3 documentos para cada coleção (2,0)
+use p2_cursos;
+db.curso.save({"nome":"Devops","duracao":"120"});
+db.curso.save({"nome":"APP Developer","duracao":"300"});
+db.curso.save({"nome":"Web Developer","duracao":"400"});
+
+db.instrutor.save({"nome":"Andre Souza","telefone":"2345-0345","endereco":"Rua vergueiro"});
+db.instrutor.save({"nome":"Mariana Silva","telefone":"6578-5345","endereco":"av. anchieta"});
+db.instrutor.save({"nome":"Juliana Alburqueque","telefone":"3465-1785","endereco":"av. cursino"});
+
+db.aluno.save({"nome":"maria da silva","endereco":"Rua bom pastor","telefone":"2342-4234"});
+db.aluno.save({"nome":"joao da silva","endereco":"av. nazaret","telefone":"8345-3455"});
+db.aluno.save({"nome":"Sandra souza","endereco":"rua silva bueno","telefone":"2345-8345"});
+
+curso, aluno, professor
+db.turma.save({"inicio":"2022-06-20","fim":"2022-07-20","horario":"15:00","preco":"90","curso":[{"nome":"Devops","duracao":"120"}], "instrutor":[{"nome":"Andre Souza","telefone":"2345-0345","endereco":"Rua vergueiro"}],"aluno":[{"nome":"maria da silva","endereco":"Rua bom pastor","telefone":"2342-4234"}]});
+
+db.turma.save({"inicio":"2022-06-20","fim":"2022-07-20","horario":"15:00","preco":"90","curso":[{"nome":"Devops","duracao":"120"}], "instrutor":[{"nome":"Andre Souza","telefone":"2345-0345","endereco":"Rua vergueiro"}],"aluno":[{"nome":"joao da silva","endereco":"av. nazaret","telefone":"8345-3455"}]});
+
+db.turma.save({"inicio":"2022-06-20","fim":"2022-07-20","horario":"15:00","preco":"90","curso":[{"nome":"Devops","duracao":"120"}], "instrutor":[{"nome":"Andre Souza","telefone":"2345-0345","endereco":"Rua vergueiro"}],"aluno":[{"nome":"Sandra souza","endereco":"rua silva bueno","telefone":"2345-8345"}]});
+
+db.turma.save({"inicio":"2022-06-20","fim":"2022-07-20","horario":"15:00","preco":"90","curso":[{"nome":"Devops","duracao":"120"}], "instrutor":[{"nome":"Mariana Silva","telefone":"6578-5345","endereco":"av. anchieta"}],"aluno":[{"nome":"maria da silva","endereco":"Rua bom pastor","telefone":"2342-4234"}]});
+
+db.turma.save({"inicio":"2022-06-20","fim":"2022-07-20","horario":"15:00","preco":"90","curso":[{"nome":"Devops","duracao":"120"}], "instrutor":[{"nome":"Juliana Alburqueque","telefone":"3465-1785","endereco":"av. cursino"}],"aluno":[{"nome":"joao da silva","endereco":"av. nazaret","telefone":"8345-3455"}]});
+
+7-Faça uma consulta dos CURSOS onde o preco for menor que R$ 100,00 ordenada por NOME (1,0)
+db.turma.find({"turma.preco":{$lte:"100"}}).sort({"turma.curso.nome":1}).pretty()

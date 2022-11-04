@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6284394ae9680ef2c338efe5"
+  },
+  "dataOcupacao": "10/05/2022",
+  "horaInicioOcupacao": "15:20:02"
+},{
+  "_id": {
+    "$oid": "628439b9e9680ef2c338efe6"
+  },
+  "dataOcupacao": "12/05/2022",
+  "horaInicioOcupacao": "17:20:02"
+},{
+  "_id": {
+    "$oid": "628439c4e9680ef2c338efe7"
+  },
+  "dataOcupacao": "14/05/2022",
+  "horaInicioOcupacao": "15:20:02"
+}]

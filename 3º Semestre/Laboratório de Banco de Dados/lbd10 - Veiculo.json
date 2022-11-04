@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "628438bde9680ef2c338efca"
+  },
+  "placa": "abc-123",
+  "cor": "roxo"
+},{
+  "_id": {
+    "$oid": "628438dbe9680ef2c338efcb"
+  },
+  "placa": "dcb-576",
+  "cor": "azul"
+},{
+  "_id": {
+    "$oid": "628438fae9680ef2c338efcc"
+  },
+  "placa": "joy-567",
+  "cor": "roxo"
+}]

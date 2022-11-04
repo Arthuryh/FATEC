@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Correção atividade pw03</title>
+        <link rel="stylesheet" href="estilo5.css">
+    </head>
+    <body id="corpo">
+        <div id="topo">
+            <h1>Contato</h1>
+            <br/><br/>
+        </div>
+        <div id="menu">
+            <i>Seja bem vindo, preencha o <b>formulário</b>
+                abaixo para:</i><br/><br/>
+                <ul>
+                    <li>duvidas</li>
+                    <li>sugestões</li>
+                    <li>criticas</li>
+                    <li>Orçamentos</li>
+                </ul> <br/><br/>
+                caso queira ver nossos produtos,
+                clique <a href="">aqui</a><br/><br/>
+
+        </div>
+        <div id="conteudo">
+            <form class="janela">
+                nome:<input type="text" id="txtNome"
+                required placeholder="digite seu nome"
+                pattern="[A-z\s]{6,100}" /> <br/>
+                email:<input type="email" id="txtEmail"
+                required placeholder="digite seu email" /><br/>
+                telefone:<input type="text" id="telefone"
+                required placeholder="digite seu telefone"
+                pattern="[0-9]{4,5}-[0-9]{4}" /><br/>
+                assunto:<select id="assunto">
+                    <option></option>
+                    <option>duvidas</option>
+                    <option>sugestões</option>
+                    <option>criticas</option>
+                    <option>orçamento</option>
+                </select><br/>
+                Deseja receber uma copia deste e-mail:
+                <input type="radio" id="ops" name="copia"/>
+                Sim
+                <input type="radio" id="opn" name="copia"/>
+                Não <br/>
+                mensagem:<textarea id="txtMensagem"
+                placeholder="digite sua mensagem" required
+                rows="5" cols="40"></textarea><br/>
+                <button>Enviar</button>
+            </form>
+        </div>
+    </body>
+</html>

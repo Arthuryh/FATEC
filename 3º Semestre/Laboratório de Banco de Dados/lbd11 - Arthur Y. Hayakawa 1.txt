@@ -1,0 +1,11 @@
+e1 - Traga os veiculos que tenham o fabricante fiat e ordene pela placa em ordem decrescente
+db.veiculos.find({"modeloCarro.fabricante":"fiat"}).sort({"placa":-1})
+
+e2 - traga as vagas que tenham valor de hora inicial menor que R$ 10,00 limite a exibição para as 3 primeiras
+db.vagas.find({"ocupacaoVaga.valorPrimeiraHora":{$lt:"10"}}).limit(3)
+
+e3 - crie um indice da coleção vagas para o atributo  numero da vaga
+db.NovaVaga.createIndex({"numero":1})
+
+e4 - mostre todas as vagas com a informação diaUtil = false ordene por numero da vaga
+db.vagas.find({"ocupacaoVaga.diaUtil":"false"}).sort({"numero":1})
