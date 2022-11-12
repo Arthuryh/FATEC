@@ -1,18 +1,19 @@
 package sab;
 
-public class Cliente {
+public class Cliente implements Pessoa{
 	 //ATRIBUTOS
     private String nome, genero;
-    private int idade, cpf;
+    private int idade, cpf, energia;
     private boolean status;
     
     //METODO CONSTRUTOR
-    public Cliente(String n, String g, int i, int cp)
+    public Cliente(String n, String g, int i, int cp, int e)
     {
         this.nome = n;
         this.genero = g;
         this.idade = i;
         this.cpf = cp;
+        this.energia = e;
         this.status=false;
     
     }
@@ -27,6 +28,7 @@ public class Cliente {
         System.out.println("Idade: "+this.idade);
         System.out.println("CPF: "+this.cpf);
         System.out.println("Status: "+this.status);
+        System.out.println("Energia: "+this.energia);
         
     }
     
@@ -44,7 +46,7 @@ public class Cliente {
         this.status=true;
     }
 
-    //acessores setores
+    //acessores, modificador
 
 	public String getNome() {
 		return nome;
@@ -93,6 +95,32 @@ public class Cliente {
 
 	public void setStatus(boolean status) {
 		this.status = status;
+	}
+
+	//Metodos implementados da interface pessoa
+	@Override
+	public void andar() {
+		if(this.energia<0)
+			this.energia = 0;
+		else
+			this.energia-=5;
+		
+	}
+
+
+	@Override
+	public void correr() {
+		if(this.energia<0)
+			this.energia = 0;
+		else
+			this.energia-=10;
+	}
+
+
+	@Override
+	public void falar() {
+		System.out.println("A pessoa está falando...");
+		
 	}
     
     

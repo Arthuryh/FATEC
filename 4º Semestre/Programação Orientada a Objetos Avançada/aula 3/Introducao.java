@@ -26,14 +26,20 @@ public class Introducao {
 		kilom.estado();
 		ler.close();
 		
-		Cliente pessoa = new Cliente("wathanan", "bolsonaro",54,82144587);
+		Cliente pessoa = new Cliente("wathanan", "masculino",54,82144587,100);
 		
 		pessoa.cadastrar();
 		
 		pessoa.status();
 		
+		pessoa.andar();
+		
 		pessoa.estado();
 		
+		pessoa.falar();
 		
+		pessoa.correr();
+		
+		pessoa.estado();
 	}
 }
